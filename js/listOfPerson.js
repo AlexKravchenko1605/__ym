@@ -26,73 +26,12 @@ export const sendRequest = function (method, url) {
 
 export const findTable = function (cart) {
   let table = document.querySelector(".person_date_table");
+  let mymodal = document.querySelector(".mymodal");
+
   table.addEventListener("click", (e) => {
     e.preventDefault();
-
     if (e.target.className === "remove") {
-      deletePerson(e);
-      function deletePerson(e) {
-        e.preventDefault();
-        setModal("block", e);
-        let mymodal = document.querySelector(".mymodal");
-        mymodal.querySelector(".close").addEventListener("click", () => {
-          // e.preventDefault();
-          setModal("none", e);
-          let curTarget = document.querySelector(".removedUser").innerHTML;
-          curTarget = "";
-          
-        });
-
-        mymodal.querySelector(".no").addEventListener("click", () => {
-          e.preventDefault();
-          setModal("none", e);
-          let curTarget = document.querySelector(".removedUser").innerHTML;
-          curTarget = "";
-          
-        });
-
-        mymodal.querySelector(".yes").addEventListener("click", (e) => {
-          e.preventDefault();
-          removedUserVolum.play();
-
-          let curTarget = document.querySelector(".removedUser").innerHTML;
-          
-          let result = cart.users.filter((e) => {
-            return (
-              e.fullName.toUpperCase().replace(/ /g, "") !==
-              curTarget.toUpperCase().replace(/ /g, "")
-            );
-          });
-
-          cart.users = result;
-         
-          let newArrayToStorage = JSON.stringify(cart);
-
-          let req = new XMLHttpRequest();
-          req.open("PUT", requestPUTURL, true);
-          req.setRequestHeader("Content-Type", "application/json");
-          req.setRequestHeader(
-            "X-Master-Key",
-            "$2b$10$v.uPsOT.RAHvN3CC39KV8OmewmP.TWWsU4dv4Q5a4m6OE/Jb9D2hy"
-          );
-          req.send(newArrayToStorage);
-
-          if (document.querySelector(".profile_grid") !== null)
-            document.querySelector(".profile_grid").remove();
-          setModal("none", e);
-          if (document.querySelector(".tabs-nav") !== null)
-            document.querySelector(".tabs-nav").style.opacity = "1";
-          document.querySelector(".footer-wrapper").style.opacity = "1";
-        });
-
-        // keydown Esc
-        document.addEventListener("keydown", (e) => {
-          if (e.code == "Escape") {
-            e.preventDefault();
-            setModal("none", e);
-          }
-        });
-      }
+      setModal("block", e);
     } else {
       showPersonDate(e);
 
@@ -103,7 +42,51 @@ export const findTable = function (cart) {
       }
     }
   });
+  mymodal.querySelector(".close").addEventListener("click", (e) => {
+    setModal("none", e);
+  });
+  mymodal.querySelector(".no").addEventListener("click", (e) => {
+    setModal("none", e);
+  });
+
+  mymodal.querySelector(".yes").addEventListener("click", (e) => {
+    e.preventDefault();
+    removedUserVolum.play();
+    let curTarget = document.querySelector(".removedUser").innerHTML;
+
+    let result = cart.users.filter((e) => {
+      return (
+        e.fullName.toUpperCase().replace(/ /g, "") !==
+        curTarget.toUpperCase().replace(/ /g, "")
+      );
+    });
+    console.log(result);
+    cart.users = result;
+    let newArrayToStorage = JSON.stringify(cart);
+
+    let req = new XMLHttpRequest();
+    req.open("PUT", requestPUTURL, true);
+    req.setRequestHeader("Content-Type", "application/json");
+    req.setRequestHeader(
+      "X-Master-Key",
+      "$2b$10$v.uPsOT.RAHvN3CC39KV8OmewmP.TWWsU4dv4Q5a4m6OE/Jb9D2hy"
+    );
+    req.send(newArrayToStorage);
+    if (document.querySelector(".profile_grid") !== null)
+      document.querySelector(".profile_grid").remove();
+
+    setModal("none", e);
+  });
+
+  // keydown Esc
+  document.addEventListener("keydown", (e) => {
+    if (e.code == "Escape") {
+      e.preventDefault();
+      setModal("none", e);
+    }
+  });
 };
+
 export const addNewPerson = function (cart) {
   addUserVolum.play();
   const newUser = {};
@@ -771,14 +754,14 @@ const fillingTableData = function (cart, event) {
   trainingType.onchange = checkValueOfSelects;
   teacher.onchange = checkValueOfSelects;
 };
-
+// показываем модальное окно( а также пишим внутри ФИО пользователя которого хотим удалить)
 const setModal = function (display, event) {
   event.preventDefault();
-  const modal = document.querySelector(".mymodal");
-  const content = document.querySelector(".content_modal");
+
+  let modal = document.querySelector(".mymodal");
+  let content = document.querySelector(".content_modal");
   modal.style.display = display;
-  if (content.querySelector(".removedUser").innerHTML === null) {
-   
+  if (modal.style.display === "none") {
     content.querySelector(".removedUser").innerHTML = "";
   } else {
     content.querySelector(".removedUser").innerHTML =
