@@ -54,7 +54,8 @@
 
 /* shot_inform */
 .shot_inform_wrapper {
-  background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/owls.jpg);
+  /* background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/owls.jpg); */
+  background-image: url(../../assets/img/background_shot_inform.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -205,7 +206,7 @@ h3 {
 
 /* to visit */
 .to_visit {
-  background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/background213.jpg);
+  background-image: url(../../assets/img/background_tel.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: scroll;
