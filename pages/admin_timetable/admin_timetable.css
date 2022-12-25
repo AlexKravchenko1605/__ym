@@ -1,0 +1,125 @@
+a:hover {
+  cursor: pointer;
+}
+a + a {
+  margin-left: 5px;
+}
+
+.timetable__wrapper {
+  display: flex;
+  max-width: 1200px;
+}
+.out_inform_per_day__calendar {
+  max-width: 400px;
+}
+.out-3__timetable {
+  width: fit-content;
+}
+.prevYear,
+.nextYear,
+.prevMonth,
+.nextMonth {
+  border: 2px solid white;
+  margin: 1px;
+  color: white;
+}
+.prevMonth,
+.nextMonth {
+  padding: 2px 6.5px;
+}
+
+.prevYear,
+.nextYear {
+  padding: 2px;
+}
+
+.container_calendar {
+  float: left;
+  max-width: 300px;
+}
+.container_table {
+  float: left;
+  max-width: 300px;
+}
+.title-wrapper__calendar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink);
+  max-width: 300px;
+  border: 1px solid var(--white);
+  border-collapse: collapse;
+}
+.out-1__calendar {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0px 15px;
+  width: 200px;
+  color: var(--white);
+  font-weight: bold;
+}
+
+td,
+th {
+  border: 1px solid var(--white);
+  padding: 5px;
+  text-align: center;
+}
+
+td:hover {
+  cursor: pointer;
+}
+
+th {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: var(--pink);
+  color: var(--white);
+}
+
+.weekend {
+  background-color: var(--td-blue);
+  color: var(--white);
+  font-weight: bolder;
+}
+.dayOfPrevMonth,
+.dayAfterMonth {
+  background-color: var(--td-calendar-lightgray);
+}
+
+.redBorder {
+  border: 2px solid red;
+  border-collapse: collapse;
+}
+
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#list {
+  float: left;
+}
+
+.hovered {
+  background-color: var(--pink);
+}
+
+.time__p:hover {
+  color: red;
+}
+
+.td_width_timetable {
+  color: red;
+}
+
+.parent {
+  position: relative;
+}
+.person_date_table__timetable {
+  position: fixed;
+  color: var(--white);
+  background-color: var(--pink);
+  border-collapse: collapse;
+  font-size: 1.2rem;
+}

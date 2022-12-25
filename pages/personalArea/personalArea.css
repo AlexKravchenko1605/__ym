@@ -1,0 +1,307 @@
+* {
+  box-sizing: border-box;
+}
+
+.content_tabs-block {
+  display: block !important;
+}
+
+.content_tabs {
+  display: none;
+}
+.active {
+  background-color: var(--white) !important;
+  border-radius: 27px;
+  border: none;
+}
+.tabs-nav {
+  margin-bottom: 10px;
+}
+
+.table_wrapper {
+  display: flex;
+  margin-top: 80px;
+}
+
+.profile_grid {
+  display: flex;
+  flex-flow: column nowrap;
+  position: relative;
+  background-color: var(--pink);
+  width: auto;
+  min-height: 460px;
+  max-height: 683px;
+  height: auto;
+  width: 600px;
+  margin: 0px 10px;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.header_div {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 25px;
+}
+.client_logo {
+  width: 158px;
+  height: 158px;
+  cursor: pointer;
+  background-color: #626694;
+  border-radius: 25px;
+  padding: 15px;
+}
+
+.client_logo img {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+}
+
+.right_header_div {
+  display: flex;
+  flex-flow: column nowrap;
+  margin-left: 25px;
+  color: var(--white);
+}
+#full_name {
+  margin-bottom: 10px;
+}
+
+.tabs-nav {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  padding-left: 0px;
+}
+#profile-tabs {
+  margin-top: 10px;
+}
+#profile-tabs > ul > li {
+  white-space: pre;
+  background: transparent;
+  list-style: none;
+  position: relative;
+  top: 0;
+  margin: 1px 0.2em 0 0;
+  border-bottom-width: 0;
+  padding: 0;
+  white-space: nowrap;
+}
+
+.li-profile_tabs {
+  list-style: none;
+  margin: 1px 0.2em 0 0;
+}
+
+#profile-tabs > ul > li > a {
+  color: black;
+  outline: none;
+  border-color: #cccccc;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border: 1px solid grey;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+#profile-tabs > ul > li > a:hover {
+  background-color: var(--white);
+}
+
+.account-div {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-top: 20px;
+  color: var(--white);
+}
+#teacher_out {
+  margin-bottom: 10px;
+}
+#lk_type_of_abonement {
+  margin-bottom: 10px;
+}
+
+.account-header-div {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 300px;
+  margin-top: 0px;
+}
+.row-wrap-div {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.account-counter {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 120px;
+}
+.account-count-left {
+  font-size: 3em;
+}
+
+.account-count-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  margin: 0 0 8px 5px;
+}
+
+#visit-tabs .table_1 {
+  border: none;
+}
+
+.wraper_inform {
+  display: flex;
+}
+
+#telNumber_out {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+.note_the_visit {
+  margin-bottom: 10px;
+  color: var(--white);
+  background-color: rgb(25, 248, 25);
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 20px;
+  position: absolute;
+  top: 176px;
+  left: 30px;
+  width: 133px;
+}
+.red {
+  background-color: red;
+}
+.note_the_visit:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  translate: all 0.3s ease;
+}
+.select_choice_teacher,
+.select_training_type,
+.select_abonement {
+  color: var(--main-blue);
+  margin-bottom: 10px;
+  border-radius: 5px;
+  width: 259px;
+}
+
+.select_abonement:focus-visible {
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid var(--main-blue);
+}
+.select_training_type:focus-visible {
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid var(--main-blue);
+}
+.select_choice_teacher:focus-visible {
+  border: none;
+  border-radius: 5px;
+  outline: 1px solid var(--main-blue);
+}
+
+.submitBtn {
+  color: var(--main-blue);
+  border: none;
+  border-radius: 5px;
+  background-color: var(--white);
+  padding: 5px;
+  position: absolute;
+  top: 208px;
+  left: 244px;
+}
+
+.submitBtn:disabled {
+  opacity: 0.33;
+}
+
+.submitBtn:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2s ease;
+}
+#visit-tabs,
+#sale-tabs,
+#tabs_4 {
+  color: var(--white);
+}
+
+.table_1_sale_tabs {
+  border: none;
+  width: max-content;
+}
+
+#tabs_2,
+#tabs_3 {
+  height: 100px;
+  overflow-y: auto;
+}
+
+@media (max-width: 400px) {
+  body {
+    overflow-y: auto;
+  }
+  .profile_grid {
+    margin: 0;
+    width: 302px;
+    height: 100vh;
+  }
+  .client_logo img {
+    width: 70px;
+    height: 70px;
+  }
+  .client_logo {
+    width: 90px;
+    height: 90px;
+    padding: 10px;
+  }
+
+  #profile-tabs > ul > li > a {
+    padding: 0;
+    border-radius: 5px;
+  }
+  #teacher_out,
+  #lk_type_of_abonement,
+  #lk_periodAbonement {
+    text-align: center;
+  }
+  .row-wrap-div {
+    margin-top: 25px;
+  }
+
+  #visit-tabs .table_1 {
+    width: auto;
+    text-align: center;
+    font-style: 16px;
+  }
+
+  #visit-tabs .table_1 tr td {
+  }
+
+  #tabs_2,
+  #tabs_3 {
+    height: 300px;
+    overflow-y: auto;
+  }
+  .account-div {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 320px) {
+  body {
+    min-width: 303px;
+  }
+}

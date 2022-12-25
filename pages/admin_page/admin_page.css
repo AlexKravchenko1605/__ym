@@ -1,0 +1,102 @@
+.admin_page {
+  margin-top: 130px;
+}
+
+.container_admin_page {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+}
+
+.statistics {
+  margin-left: 25vw;
+}
+.header {
+  width: 13vw;
+}
+
+#admin_content {
+  margin-left: 20px;
+  margin-bottom: 10vh;
+}
+#admin_content .container {
+  max-width: 1200px;
+}
+
+.header_links {
+  padding-left: 10px;
+  width: 100%;
+  height: 250px;
+}
+
+.header_links__li {
+  padding: 10px;
+  font-size: 1.2rem;
+  color: var(--main-blue);
+}
+.header_links__li:hover {
+  cursor: pointer;
+  color: var(--pink);
+  border-radius: 10px;
+  border: 1px solid var(--pink);
+  box-shadow: 2px 5px 5px var(--pink);
+}
+
+canvas {
+  width: 400px !important;
+  height: 400px !important;
+}
+
+.container_ideas {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1024px;
+  width: 1024px;
+}
+.container_ideas div input {
+  width: 100px;
+}
+
+.text {
+  font-size: 13px;
+}
+.inform_about_child_out {
+  margin-left: 50px;
+}
+
+.out-1,
+.out-2,
+.out-3,
+.out-4 {
+  width: 250px;
+}
+.boom {
+  font-size: 13px;
+  margin-top: 15px;
+}
+.boom:hover {
+  cursor: pointer;
+  color: red;
+}
+ol {
+  padding: 0;
+}
+.add_1,
+.add_2,
+.add_3,
+.add_4 {
+  font-size: 13px;
+}
+
+.ideas_name {
+  color: var(--main-blue);
+}
+
+/* /*media queries*/
+@media (max-width: 1600px) {
+  .container_admin_page {
+    margin: 0 25px;
+    padding-top: 29px;
+  }
+}

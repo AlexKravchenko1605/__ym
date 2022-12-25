@@ -1,0 +1,295 @@
+/*footer*/
+.footer-wrapper {
+  background-color: var(--white);
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+}
+
+/*footer map*/
+.footer-container {
+  padding: 0px 97px 0 97px;
+  width: 1410px;
+  max-width: 1410px;
+}
+
+.footer-container .delimiter {
+  margin-top: 50px;
+  border: none;
+  color: var(--pink);
+  background-color: var(--pink);
+  height: 2px;
+}
+
+.footer-map {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-signature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.footer-signature .rights,
+.footer-signature .policy {
+  color: var(--pink);
+  margin-top: 10px;
+}
+
+.footer-navigation,
+.footer-service {
+  position: relative;
+}
+
+.footer-navigation .links,
+.footer-service .links,
+.follow-us,
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-navigation h3,
+.footer-service h3,
+.follow-us h3,
+.footer-subscribe h3 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.footer-navigation .links span,
+.footer-service .links span,
+.follow-us span {
+  font-size: 19px;
+  color: var(--main-blue);
+  margin-bottom: 8px;
+
+  cursor: pointer;
+}
+.footer-service .links span i {
+  margin-right: 5px;
+}
+
+.footer-navigation .links span:hover,
+.footer-service .links span:hover,
+.follow-us span:hover {
+  filter: brightness(50%);
+}
+
+.follow-us .lg {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow-us .sm {
+  display: none;
+}
+
+.follow-us .sm img {
+  margin-right: 15px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.footer-subscribe {
+  width: 195px;
+}
+
+.footer-subscribe input {
+  width: calc(100% - 9px);
+  background-color: transparent;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.footer-subscribe button {
+  width: 100%;
+  height: 35px;
+  background-color: var(--subscribe-btn-color);
+  color: var(--black);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-top: 15px;
+}
+
+.footer-navigation .chevron,
+.footer-service .chevron {
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+
+.footer-navigation .chevron {
+  left: 132px;
+}
+
+.footer-service .chevron {
+  left: 115px;
+}
+
+.footer_links_item {
+  display: flex;
+  align-items: center;
+}
+.blue {
+  color: var(--main-blue);
+}
+
+.chevron .up {
+  display: none;
+}
+
+.chevron.toggle .up {
+  display: block;
+}
+
+.chevron.toggle .down {
+  display: none;
+}
+
+/*media queries*/
+@media (max-width: 1024px) {
+  .subscribe {
+    display: flex;
+    align-items: center;
+  }
+
+  .subscribe p {
+    margin-right: 240px;
+  }
+
+  .subscribe .policy {
+    margin-right: 45px;
+  }
+
+  .footer-container {
+    padding: 120px 15px 0 15px;
+  }
+}
+
+@media (max-width: 800px) {
+  .subscribe p {
+    width: 490px;
+    margin-right: 0;
+  }
+
+  .footer-map {
+    flex-direction: column;
+  }
+
+  .footer-wrapper {
+    height: fit-content;
+  }
+
+  .footer-container {
+    padding: 30px 15px 0 15px;
+  }
+
+  .footer-subscribe {
+    display: none;
+  }
+
+  .footer-signature,
+  .footer-logo {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .footer-navigation,
+  .footer-service,
+  .follow-us {
+    margin-top: 15px;
+  }
+
+  .footer-wrapper .delimiter {
+    margin-top: 70px;
+  }
+
+  .footer-navigation .chevron,
+  .footer-service .chevron {
+    display: flex;
+    top: -3px;
+  }
+
+  .footer-navigation .links,
+  .footer-service .links {
+    display: none;
+  }
+
+  .footer-navigation .links.toggle,
+  .footer-service .links.toggle {
+    display: flex;
+  }
+
+  .follow-us .lg {
+    display: none;
+  }
+
+  .follow-us .sm {
+    display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .subscribe {
+    padding: 0 10px;
+    height: 322px;
+  }
+
+  .subscribe p {
+    width: 100%;
+    margin-left: 25px;
+  }
+
+  .subscribe .policy {
+    margin-right: auto;
+  }
+
+  .subscribe .policy input {
+    margin: 0 4px 5px 0;
+  }
+
+  .subscribe .policy span {
+    font-size: 12px;
+  }
+
+  .subscribe-form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .subscribe-form input {
+    width: 100%;
+    max-width: 292px;
+    margin-bottom: 10px;
+  }
+
+  .subscribe-form button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 409px) {
+  .policy span {
+    margin-top: 10px;
+  }
+}

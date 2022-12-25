@@ -1,0 +1,172 @@
+.lk_page {
+  position: relative;
+  top: 130px;
+  left: 30vw;
+  margin-bottom: 20vh !important;
+  display: none !important;
+}
+.active-profile {
+  display: block !important;
+}
+
+/* modal window */
+
+.mymodal_lk_user {
+  display: block;
+  z-index: 10000;
+  margin-bottom: 95vh;
+}
+
+.mymodal_lk_user .overlay_lk_user {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.mymodal_lk_user .content_modal_lk_user {
+  display: block;
+  margin: 35vh auto;
+  width: 300px;
+  height: 300px;
+  background-color: var(--pink);
+  border-radius: 10px;
+  padding: 30px;
+  color: var(--white);
+  position: relative;
+}
+
+.content.component {
+  /* margin-bottom: 100vh; */
+}
+
+.mymodal_lk_user .close_modal_password {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.mymodal_lk_user .close_modal_password:hover {
+  transform: rotate(180deg);
+}
+.content_modal_lk_user h3 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.wrapper_login_and_password {
+  display: flex;
+  flex-direction: column;
+  font-size: 24px;
+}
+.wrapper_login_and_password label {
+  margin-top: 15px;
+}
+
+#login {
+  margin-top: 5px;
+  border-radius: 25px;
+  border: none;
+}
+#password {
+  margin-top: 5px;
+  border-radius: 25px;
+  border: none;
+  margin-bottom: 15px;
+}
+
+#login:focus-visible {
+  outline: 2px solid var(--main-blue);
+}
+#password:focus-visible {
+  outline: 2px solid var(--main-blue);
+}
+
+.send_user_data {
+  border: none;
+  border-radius: 25px;
+}
+.send_user_data:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.2s ease;
+}
+#lk_name {
+  font-weight: 800;
+}
+#lk_year {
+  margin-top: 25px;
+  font-size: 22px;
+}
+#lk_number {
+  margin-top: 15px;
+  font-size: 21px;
+}
+
+.mymodal_lk_user__not_found {
+  display: block;
+  z-index: 10000;
+}
+
+.mymodal_lk_user__not_found .content_modal_lk_user__not_found {
+  display: block;
+  margin: 35vh auto;
+  width: 600px;
+  height: 100px;
+  background-color: var(--pink);
+  border-radius: 10px;
+  padding: 30px;
+  color: var(--white);
+  position: relative;
+}
+
+.content_modal_lk_user__not_found h3 {
+  margin-top: 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.close_modal_not_found {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.close_modal_not_found:hover {
+  transform: rotate(180deg);
+}
+
+/* media queries */
+@media (max-width: 400px) {
+  .profile_grid {
+    margin: 0px;
+    width: 320px;
+  }
+  .mymodal_lk_user__not_found .content_modal_lk_user__not_found {
+    margin: 35vh 10px;
+    width: 278px;
+    height: 216px;
+  }
+
+  .lk_page {
+    left: 2px;
+    margin-bottom: 0px !important;
+  }
+  #lk_name {
+    font-size: 16px;
+  }
+  #lk_year {
+    margin-top: 10px;
+    font-size: 19px;
+  }
+  #lk_number {
+    margin-top: 9px;
+    font-size: 18px;
+  }
+}

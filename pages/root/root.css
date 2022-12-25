@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.title {
+  color: white;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 56px;
+  font-family: "Comfortaa", cursive;
+  position: absolute;
+  top: 150px;
+  left: 245px;
+  z-index: 99;
+}
+
+.subtitle {
+  color: white;
+  padding-top: 50px;
+  padding-left: 50px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 56px;
+  font-family: "Comfortaa", cursive;
+  position: absolute;
+  top: 290px;
+  left: 247px;
+  z-index: 99;
+}
+
+.slider_container {
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider_item {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-img {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* shot_inform */
+.shot_inform_wrapper {
+  background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/owls.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: flex-start;
+}
+
+.shot_inform_inner {
+  margin: 0 -1.77%;
+  position: relative;
+  text-align: center;
+  width: 21.6%;
+  color: var(--white);
+}
+
+.icon_box {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+h3 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* program */
+.programm_wrapper {
+  /* background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/fon_153.jpg); вариант фона для блока! */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+  height: fit-content;
+  width: 75vw;
+}
+.slider_wrapper {
+  padding: 80px 0px 20px;
+}
+.slider_wrapper h2 {
+  text-align: center;
+  color: var(--main-blue);
+  font-size: 35px;
+}
+
+.programm_slider {
+  width: 96.6%;
+  position: relative;
+  display: block;
+  clear: both;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+.programm_slider_item {
+  position: relative;
+  overflow: hidden;
+  width: 260px;
+  margin: 0 50px;
+  z-index: 1;
+}
+.program_slider_title h3 {
+  font-size: 18px;
+  text-align: left;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  color: var(--white);
+}
+.program_slider_inner_details {
+  display: flex;
+
+  color: var(--white);
+}
+.programm_slider_item_1 {
+  background-color: var(--pink);
+}
+.programm_slider_item_2 {
+  background-color: var(--yellow);
+}
+.programm_slider_item_3 {
+  background-color: var(--main-blue);
+}
+.programm_slider_item_4 {
+  background-color: var(--red);
+}
+.programm_slider_item_5 {
+  background-color: var(--dark-pink);
+}
+.programm_slider_item_6 {
+  background-color: var(--dark-blue);
+}
+
+.program_slider_inner {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 20px;
+}
+.program_slider_item_subtitle,
+.program_slider_item_descr {
+  font-size: 14px;
+}
+
+.slider_img img {
+  width: 100%;
+  height: 150px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.slick-prev.slick-arrow {
+  border: none;
+  color: black;
+  width: 60px;
+  height: 60px;
+}
+
+.slick-next.slick-arrow {
+  position: absolute;
+  top: 80%;
+  left: 59%;
+  z-index: 9999;
+}
+.slick-prev.slick-arrow {
+  position: absolute;
+  top: 80%;
+  left: 33%;
+  z-index: 9999;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: pink !important;
+}
+
+/* to visit */
+.to_visit {
+  background-image: url(http://fastrackids.by/wp-content/uploads/2015/07/background213.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.to_visit_wrapper {
+  padding: 80px 0px;
+}
+.to_visit_outer {
+  text-align: center;
+  font-size: 32px;
+  color: var(--white);
+}
+.to_visit_header {
+  margin-bottom: 25px;
+}
+
+/*media queries*/
+@media (max-width: 1600px) {
+  .title {
+    left: 100px;
+  }
+  .subtitle {
+    left: 97px;
+  }
+  .programm_wrapper {
+    width: 100vw;
+  }
+
+  .slick-prev.slick-arrow {
+    left: 39%;
+  }
+}
+
+@media (max-width: 808px) {
+  .title {
+    font-size: 24px;
+    top: 122px;
+    left: -12px;
+  }
+  .subtitle {
+    top: 254px;
+    left: -8px;
+  }
+
+  .shot_inform_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .shot_inform_inner {
+    width: 50%;
+  }
+
+  .programm_slider_item {
+    margin: 0 50px;
+    width: 270px;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 16px;
+    top: 165px;
+    left: -30px;
+  }
+  .subtitle {
+    font-size: 19px;
+    top: 362px;
+    left: -33px;
+  }
+
+  .shot_inform_wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding-bottom: 50px;
+  }
+  .slider_wrapper h2 {
+    font-size: 32px;
+  }
+  .slick-prev.slick-arrow {
+    left: 19%;
+    top: 88%;
+  }
+  .slick-next.slick-arrow {
+    top: 88%;
+  }
+  .programm_slider_item {
+    margin: 0 60px;
+  }
+  .programm_slider {
+    width: 88%;
+    padding-bottom: 100px;
+  }
+  .program_slider_item_subtitle,
+  .program_slider_item_descr {
+    font-size: 15px;
+  }
+}

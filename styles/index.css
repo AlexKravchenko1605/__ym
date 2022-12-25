@@ -1,0 +1,45 @@
+@import "./variables.css";
+@import "./normalize.css";
+@import "../pages/admin_page/admin_page.css";
+@import "../pages/lk_page/lk_page.css";
+@import "../pages/header/header.css";
+@import "../pages/footer/footer.css";
+@import "../pages/root/root.css";
+@import "../pages/price_and_timetable/price_and_timetable.css";
+@import "../pages/personalArea/personalArea.css";
+@import "../pages/list_of_person/list.css";
+@import "../pages/new_person/new_person.css";
+@import "../pages/admin_timetable/admin_timetable.css";
+
+* {
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+.page_not_found {
+  margin: 100px auto 0px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+body {
+  font-family: "Amatic SC", cursive;
+}
+.statistics h3 {
+  text-align: center;
+  color: var(--main-blue);
+}
+/* not_found_page */
+.page_not_found img {
+  width: 100vw;
+  height: 100vh;
+}
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
