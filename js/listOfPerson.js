@@ -60,7 +60,7 @@ export const findTable = function (cart) {
         curTarget.toUpperCase().replace(/ /g, "")
       );
     });
-    console.log(result);
+
     cart.users = result;
     let newArrayToStorage = JSON.stringify(cart);
 
